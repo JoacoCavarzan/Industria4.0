@@ -5,8 +5,8 @@ from math import dist
 import time
 from pymodbus.client import ModbusTcpClient
 
-PLC = ModbusTcpClient("192.168.5.20")
-PLC.connect()
+# PLC = ModbusTcpClient("192.168.5.20")
+# PLC.connect()
 
 # Inicializar el modelo de detección de manos
 mpHands = mp.solutions.hands
@@ -97,7 +97,7 @@ while True:
     if deteccion is not None:
         # Anotamos cuántos dedos están arriba
         cv2.putText(frame,f"dedos detectados={sum(deteccion)}",(20,30),fontFace=0,fontScale=1,color=(0,255,0))   
-        PLC.write_coils(1,deteccion) 
+        # PLC.write_coils(1,deteccion) 
     print(deteccion)
     # Mostrar la imagen
     cv2.imshow('Deteccion de mano', frame)
@@ -110,5 +110,5 @@ while True:
 
 # Liberar la cámara y cerrar las ventanas
 cap.release()
-PLC.close()
+# PLC.close()
 cv2.destroyAllWindows()
