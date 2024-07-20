@@ -1,5 +1,4 @@
 <h1>INDUSTRIA 4.0</h1>
-.......
 
 <p>Adjunto video.gif para mostrarles algo de Visón artificial con python aplicada a la industria con herramientas open source como OpenCV y Mediapipe para:
   
